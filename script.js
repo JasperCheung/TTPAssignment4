@@ -26,6 +26,14 @@ function colPlus() {
     colCount++;
 };
 
+function colMinus() {
+    let children = Array.from(cellsTable.children);
+    children.forEach((row) => {
+        row.removeChild(row.lastChild);
+    });
+    colCount--;
+};
+
 let colorSelector = document.getElementById("select-color");
 let color;
 function updateColor() {
