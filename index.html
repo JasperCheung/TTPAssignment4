@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>
+      Assignment 4 TTP
+    </title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" type="text/javascript"> </script>
+  </head>
+  <body>
+    <div id ="container">
+      <h1> Pixelate </h1>
+
+      Rows
+      <button onclick="rowPlus()"> + </button>
+      <button onclick="rowMinus()"> - </button>
+      <br>
+      Columns
+      <button onclick="colPlus()"> + </button>
+      <button onclick="colMinus()"> - </button>
+      <br>
+      Colors:
+      <select id="select-color">
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+        <option value="purple">Purple</option>
+        <option value="green">Green</option>
+        <option value="orange">Orange</option>
+        <option value="white">White</option>
+
+      </select>
+      <div id="boxes">
+      </div>
+      <br>
+      <button onclick="fillAll()"> Fill All Cells </button>
+      <button onclick="fillEmpty()"> Fill Empty Cells</button>
+      <button onclick="clearCells()"> Clear </button>
+
+
+    </div>
+  </body>
+</html>
