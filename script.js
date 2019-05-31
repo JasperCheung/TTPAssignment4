@@ -10,16 +10,25 @@ function rowPlus() {
     }
     cellsTable.appendChild(newRow);
     rowCount++;
-}
+};
 
 function rowMinus() {
     cellsTable.removeChild(cellsTable.lastChild);
     rowCount--;
-}
+};
+
+function colPlus() {
+    let children = Array.from(cellsTable.children);
+    children.forEach((row) => {
+        let newCell = document.createElement("td");
+        row.appendChild(newCell);
+    });
+    colCount++;
+};
 
 let colorSelector = document.getElementById("select-color");
 let color;
 function updateColor() {
     color = colorSelector.value;
-}
+};
 updateColor();
