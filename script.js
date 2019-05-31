@@ -51,3 +51,19 @@ function fillAll(){
       });
     });
 };
+
+function fillEmpty(){
+  let tableChildren = Array.from(cellsTable.children);
+    tableChildren.forEach((row) => {
+      let rowChildren = Array.from(row.children);
+      rowChildren.forEach((cell)=>{
+
+        if(cell.style.backgroundColor == ""){
+
+          cell.style.backgroundColor =color;
+        }
+        //console.log(cell.style.backgroundColor);
+
+      });
+    });
+};
