@@ -67,3 +67,15 @@ function fillEmpty(){
       });
     });
 };
+
+function clearCells(){
+
+  let tableChildren = Array.from(cellsTable.children);
+  tableChildren.forEach((row) => {
+    let rowChildren = Array.from(row.children);
+    rowChildren.forEach((cell)=>{
+      cell.style.backgroundColor ="";
+
+    });
+  });
+};
