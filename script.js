@@ -7,6 +7,7 @@ function rowPlus() {
   for (let i = 0; i < colCount; i++) {
     let newCell = document.createElement("td");
     newCell.addEventListener("click",colorCell);
+    newCell.addEventListener("mouseover",colorCellDrag);
     newRow.appendChild(newCell);
   }
   cellsTable.appendChild(newRow);
@@ -23,6 +24,7 @@ function colPlus() {
   children.forEach((row) => {
     let newCell = document.createElement("td");
     newCell.addEventListener("click",colorCell);
+    newCell.addEventListener("mouseover",colorCellDrag);
     row.appendChild(newCell);
   });
   colCount++;
@@ -84,4 +86,12 @@ function clearCells(){
 function colorCell(){
   console.log(this);
   this.style.backgroundColor = color;
+};
+
+function colorCellDrag(param){
+  if(param.buttons){
+
+   this.style.backgroundColor = color;
+  }
+
 };
