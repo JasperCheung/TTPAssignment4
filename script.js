@@ -12,6 +12,11 @@ function rowPlus() {
     rowCount++;
 }
 
+function rowMinus() {
+    cellsTable.removeChild(cellsTable.lastChild);
+    rowCount--;
+}
+
 let colorSelector = document.getElementById("select-color");
 let color;
 function updateColor() {
