@@ -40,3 +40,14 @@ function updateColor() {
     color = colorSelector.value;
 };
 updateColor();
+
+function fillAll(){
+  let tableChildren = Array.from(cellsTable.children);
+    tableChildren.forEach((row) => {
+      let rowChildren = Array.from(row.children);
+      rowChildren.forEach((cell)=>{
+        cell.style.backgroundColor =color;
+
+      });
+    });
+};
