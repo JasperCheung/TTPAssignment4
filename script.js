@@ -1,5 +1,5 @@
 let rowCount = 0;
-let colCount = 16;
+let colCount = 0;
 let cellsTable = document.getElementById("cells");
 
 function rowPlus() {
@@ -15,8 +15,10 @@ function rowPlus() {
 };
 
 function rowMinus() {
-  cellsTable.removeChild(cellsTable.lastChild);
-  rowCount--;
+  if(rowCount > 0){
+    cellsTable.removeChild(cellsTable.lastChild);
+    rowCount--;
+  }
 };
 
 function colPlus() {
@@ -31,11 +33,13 @@ function colPlus() {
 };
 
 function colMinus() {
-  let children = Array.from(cellsTable.children);
-  children.forEach((row) => {
-    row.removeChild(row.lastChild);
-  });
-  colCount--;
+  if(colCount > 0){
+    let children = Array.from(cellsTable.children);
+    children.forEach((row) => {
+      row.removeChild(row.lastChild);
+    });
+    colCount--;
+  }
 };
 
 let colorSelector = document.getElementById("select-color");
